@@ -1,0 +1,76 @@
+Enumeration {
+	fontName:"Segoe UI";
+	fillColor:#B897C0;
+	transparency:0.0;
+	gradient:#FFFFFF vertical;
+	lineColor:#000000;
+	qualifiedNameDepth:2;
+	shadow:true
+}
+
+PrimitiveType {
+	fontName:"Segoe UI";
+	fillColor:#A6C198;
+	transparency:0.0;
+	gradient:#FFFFFF vertical;
+	lineColor:#000000;
+	qualifiedNameDepth:2;
+	shadow:true
+}
+
+Class {
+	fontName:"Segoe UI";
+	fillColor:#C3D7DD;
+	transparency:0.0;
+	gradient:#FFFFFF vertical;
+	lineColor:#000000;
+	qualifiedNameDepth:2;
+	shadow:true
+}
+
+Property {
+	maskLabel: isDerived isDerivedUnion name type multiplicity defaultValue;
+}
+
+Class > Compartment[kind="operations"] {
+	visible:false;
+}
+
+Class > Compartment[kind="nested classifiers"] {
+	visible:false;
+}
+
+Class > Compartment[kind="nestedClassifiers"] {
+	visible:false;
+}
+
+Class > Compartment[kind="nestedclassifiers"] {
+	visible:false;
+}
+
+Class > Compartment[kind="symbol"] {
+	visible:false;
+}
+
+PrimitiveType > Compartment[kind="attributes"] {
+	visible:false;
+}
+
+PrimitiveType > Compartment[kind="operations"] {
+	visible:false;
+}
+
+Package {
+	fontName:"Segoe UI";
+	fillColor:#EDC97A;
+	transparency:0.0;
+	gradient:#FFFFFF vertical;
+	lineColor:#000000
+}
+
+Generalization {
+	fontName:"Segoe UI";
+	routing:Rectilinear;
+	lineColor:#000000
+}
+

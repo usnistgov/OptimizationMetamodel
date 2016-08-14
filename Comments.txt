@@ -1,0 +1,11 @@
+2016-08-13: I removed the subtyping on ParameterDomain
+2016-08-13: --> It is the package used that seems to decide whether qualifiedNameDepth is applied (see AbstractType in Expressions diagram)
+2016-08-13: I removed the generalization from DefineType to Declaration
+2016-08-13: I don't know how to place more than two classes in a generalization set.
+2016-08-13: Papyrus .css qualifedNameDepth is *backwards*. I'm using '3' effectively on Classes.
+2016-08-13: How could things like EnumLiteral be both a type and a value? These are types. I'm creating Value as an expression.
+2016-08-13: Screwing around with the OptStyleSheet, I couldn't get derived unions to show. (isDerivedUnion)
+2016-08-13: Papyrus tree style generalization is known to be buggy.
+2016-08-13: Want a GeneralizationSet between Declaration subclasses; needs work.
+2016-08-13: "This element is imported" icon everywhere. Trouble?
+2016-08-13: Migrated MD model to Papyrus

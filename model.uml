@@ -1,0 +1,752 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_fTddYGDgEeansYfFUHH_3Q" name="Optimization" visibility="public">
+  <ownedComment xmi:type="uml:Comment" xmi:id="_17_0_3_1_8c30285_1411741111414_744098_2845">
+    <body>Author:pdenno.
+Created:9/26/14 10:18 AM.
+Title:.
+Comment:.
+</body>
+  </ownedComment>
+  <ownedComment xmi:type="uml:Comment" xmi:id="_gGOR0GG2Eea77phLslQNgg">
+    <body>ToDo: 
+  * What should be done with BlockExpression, 
+     CollectionExpression, Comprehension, 
+     and BindingRef?</body>
+  </ownedComment>
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_0primitiveTypesData">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_0javaPrimitiveTypesData">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Package" xmi:id="_17_0_3_1_8c30285_1423601829762_473283_3773" name="OPL Functions">
+    <packageMerge xmi:type="uml:PackageMerge" xmi:id="_17_0_3_1_8c30285_1423601839434_431336_3786" mergedPackage="_iTkaUGGOEeaGvdvSjLcz-g"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_17_0_3_1_8c30285_1420334161099_514643_3630" name="Writeln">
+      <generalization xmi:type="uml:Generalization" xmi:id="_17_0_3_1_8c30285_1420334229985_162793_3655" general="_17_0_3_1_8c30285_1420333971048_549889_3593"/>
+      <generalization xmi:type="uml:Generalization" xmi:id="_wafT4GGdEea4lKsYxG9VWg" general="_17_0_3_1_8c30285_1419019373121_591598_3724" generalizationSet="_J0zyIGGeEea4lKsYxG9VWg"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1420334187636_591835_3650" name="string" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1420334201324_305486_3652" name="arg" visibility="private"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_17_0_3_1_8c30285_1420336987782_137923_3747" name="ReadFile">
+      <generalization xmi:type="uml:Generalization" xmi:id="_17_0_3_1_8c30285_1420337047429_219711_3794" general="_17_0_3_1_8c30285_1420337022018_470195_3770"/>
+      <generalization xmi:type="uml:Generalization" xmi:id="_vzLcQGGdEea4lKsYxG9VWg" general="_17_0_3_1_8c30285_1419019373121_591598_3724"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1420337009496_149691_3767" name="path" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_17_0_3_1_8c30285_1420336952149_303090_3724" name="QueryUser">
+      <generalization xmi:type="uml:Generalization" xmi:id="_17_0_3_1_8c30285_1420337041872_945929_3791" general="_17_0_3_1_8c30285_1420337022018_470195_3770"/>
+      <generalization xmi:type="uml:Generalization" xmi:id="_vA8HAGGdEea4lKsYxG9VWg" general="_17_0_3_1_8c30285_1419019373121_591598_3724" generalizationSet="_J0zyIGGeEea4lKsYxG9VWg"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1420336968650_330763_3744" name="ask" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:GeneralizationSet" xmi:id="_J0zyIGGeEea4lKsYxG9VWg" name="GeneralizationSet_QueryUser_ReadFile" isDisjoint="true" generalization="_vA8HAGGdEea4lKsYxG9VWg _wafT4GGdEea4lKsYxG9VWg"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_17_0_3_1_8c30285_1419099719547_293248_3522" name="DisplayInstruction">
+      <generalization xmi:type="uml:Generalization" xmi:id="__Nn_8GG8EeafgMMnWkCwXA" general="_17_0_3_1_8c30285_1419019373121_591598_3724"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1419099876339_706762_3547" name="exps" visibility="private" type="_17_0_3_1_3e7016c_1413821694042_582767_3028">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_17_0_3_1_8c30285_1419100091529_210542_3549" name=""/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_17_0_3_1_8c30285_1419100091529_461202_3550" name="" value="*"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1419099851603_839109_3542" name="parameters" visibility="private" type="_17_0_3_1_8c30285_1419099876322_665085_3544">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_17_0_3_1_8c30285_1419099876323_200362_3545" name=""/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_17_0_3_1_8c30285_1419099876323_789268_3546" name="" value="*"/>
+      </ownedAttribute>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="magicdraw_uml_standard_profile_v_0001" name="UML Standard Profile">
+    <ownedComment xmi:type="uml:Comment" xmi:id="_be00301_1078843546940_242228_131" annotatedElement="magicdraw_uml_standard_profile_v_0001">
+      <body>UML Standard Profile contains UML metamodel (metaclasses without properties and associations), StandardProfileL2 and StandardProfileL3 from UML specification, Standard UML stereotypes defined in annex C of UML specification.
+Profile also includes validation suites for UML model correctness and completeness checking, and stereotypes used by MagicDraw internally.</body>
+    </ownedComment>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_dtomcGGNEeaGvdvSjLcz-g" name="Types">
+    <ownedComment xmi:type="uml:Comment" xmi:id="_Wopf8GG9EeafgMMnWkCwXA">
+      <body>EnumerationLiteral -- Assume EnumerationLiterals are a disjoint union.</body>
+    </ownedComment>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_17_0_3_1_8c30285_1432240421797_235622_3064" name="Timepoint">
+      <generalization xmi:type="uml:Generalization" xmi:id="_mbk_cGG4Eea77phLslQNgg" general="_FDNFgGG4Eea77phLslQNgg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_17_0_3_1_3e7016c_1413901240552_251434_3719" name="SetType">
+      <generalization xmi:type="uml:Generalization" xmi:id="_17_0_3_1_8c30285_1419018361765_135009_3547" general="_17_0_3_1_8c30285_1419008331388_584024_3193"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1423954355677_628152_3147" name="name" visibility="private" type="_17_0_3_1_8c30285_1430255829468_979784_3053">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_17_0_3_1_8c30285_1424032381098_174260_3086" annotatedElement="_17_0_3_1_8c30285_1423954355677_628152_3147">
+          <body>So as to enable definition of anonymous types, .name is optional in all cases but EnumerationType (OCL or redefinition?)</body>
+        </ownedComment>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_17_0_3_1_8c30285_1423954750833_479156_3172" name=""/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_17_0_3_1_8c30285_1423954750833_870283_3173" name="" value="1"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1419018365505_247908_3549" name="baseType" visibility="private" type="_17_0_3_1_8c30285_1419116887824_945549_3892"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1424030820685_998547_2895" name="elements" visibility="private" type="_17_0_3_1_8c30285_1419116887824_945549_3892">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_17_0_3_1_8c30285_1424030836431_925731_2898" name=""/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_17_0_3_1_8c30285_1424030836432_478015_2899" name="" value="*"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_17_0_3_1_8c30285_1422983625558_112618_3184" name="RangeType" visibility="package" isAbstract="true">
+      <generalization xmi:type="uml:Generalization" xmi:id="_17_0_3_1_8c30285_1423966899779_70168_3432" general="_17_0_3_1_3e7016c_1413901240552_251434_3719"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1423955181679_790552_3193" name="upperBound" visibility="private" type="_3P93wGG6EeafgMMnWkCwXA"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1423955161724_882672_3189" name="lowerBound" visibility="private" type="_3P93wGG6EeafgMMnWkCwXA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_17_0_3_1_8c30285_1432240332632_180094_3046" name="Number"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_17_0_3_1_8c30285_1419008331388_584024_3193" name="DefinedType" isAbstract="true">
+      <generalization xmi:type="uml:Generalization" xmi:id="_17_0_3_1_8c30285_1419116913125_78392_3916" general="_17_0_3_1_8c30285_1419116887824_945549_3892"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_17_0_3_1_8c30285_1419008386296_685449_3237" name="EnumerationType">
+      <generalization xmi:type="uml:Generalization" xmi:id="_17_0_3_1_8c30285_1423966903281_42686_3435" general="_17_0_3_1_3e7016c_1413901240552_251434_3719"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1426020302615_158099_2915" name="literals" visibility="private" isLeaf="true" type="_lVG0sGG6EeafgMMnWkCwXA" redefinedProperty="_17_0_3_1_8c30285_1419018365505_247908_3549">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_6ucEYGGnEeaAxfUTYeBtZA"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_6ufuwGGnEeaAxfUTYeBtZA" value="*"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_17_0_3_1_8c30285_1419116887824_945549_3892" name="AbstractType" isAbstract="true">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_17_0_3_1_8c30285_1424031546587_744816_3073" annotatedElement="_17_0_3_1_8c30285_1419116887824_945549_3892">
+        <body>The most general class of type descriptor.</body>
+      </ownedComment>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_17_0_3_1_3e7016c_1413901281831_2655_3782" name="ArrayType">
+      <generalization xmi:type="uml:Generalization" xmi:id="_17_0_3_1_8c30285_1423954412021_806567_3159" general="_17_0_3_1_8c30285_1419008331388_584024_3193"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_3e7016c_1416844788161_946926_3054" name="baseType" visibility="private" type="_17_0_3_1_8c30285_1419116887824_945549_3892"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1419116139819_275093_3780" name="subscripts" visibility="private" type="_17_0_3_1_8c30285_1422390831872_902552_3038">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_17_0_3_1_8c30285_1419122066973_663778_4252" name="" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_17_0_3_1_8c30285_1419122066974_381818_4253" name="" value="*"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_17_0_3_1_8c30285_1419008404769_729102_3262" name="Record">
+      <generalization xmi:type="uml:Generalization" xmi:id="_17_0_3_1_8c30285_1423954419579_131373_3162" general="_17_0_3_1_8c30285_1419008331388_584024_3193"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1423954379023_978347_3150" name="name" visibility="private" type="_17_0_3_1_8c30285_1430255829468_979784_3053"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1419018698625_524118_3611" name="fields" visibility="private" type="_17_0_3_1_8c30285_1419018716756_134279_3613" isOrdered="true">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_17_0_3_1_8c30285_1419018716757_468804_3614" name=""/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_17_0_3_1_8c30285_1419018716757_166881_3615" name="" value="*"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1421350927303_422737_3056" name="isTuple" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        <defaultValue xmi:type="uml:LiteralBoolean" xmi:id="_17_0_3_1_8c30285_1421350939252_203123_3059" name=""/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_17_0_3_1_8c30285_1419018716756_134279_3613" name="RecordField">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1419018792088_449549_3658" name="name" visibility="private" type="_17_0_3_1_8c30285_1430255829468_979784_3053"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1419018797841_236682_3660" name="type" visibility="private" type="_17_0_3_1_8c30285_1419116887824_945549_3892"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_17_0_3_1_8c30285_1422902636985_1321_2906" name="Sequence">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1422902691660_690660_2926" name="intervals" visibility="private" type="_17_0_3_1_8c30285_1421960256744_256654_3173">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_17_0_3_1_8c30285_1422902733513_31025_2928" name="" value="2"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_17_0_3_1_8c30285_1422902733514_923426_2929" name="" value="*"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1422902854106_825184_2930" name="types" visibility="private" type="_17_0_3_1_8c30285_1419008331388_584024_3193"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_17_0_3_1_8c30285_1421960256744_256654_3173" name="Interval">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1421959817174_577984_3167" name="isOptional" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        <defaultValue xmi:type="uml:LiteralBoolean" xmi:id="_17_0_3_1_8c30285_1421959831219_206047_3169" name=""/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1422910040172_533724_3145" name="bounds" visibility="private" type="_17_0_3_1_8c30285_1422983625558_112618_3184"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1421960501474_923488_3238" name="size" visibility="private" type="_6bagEGG6EeafgMMnWkCwXA"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1421960526612_833968_3240" name="intensity" visibility="private" type="_17_0_3_1_8c30285_1421961984026_78755_3411"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_6q_poGG5EeafgMMnWkCwXA" name="NumericType">
+      <generalization xmi:type="uml:Generalization" xmi:id="_L8Q9IGG6EeafgMMnWkCwXA" general="_FDNFgGG4Eea77phLslQNgg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_EeoG4GG6EeafgMMnWkCwXA" name="StringType">
+      <generalization xmi:type="uml:Generalization" xmi:id="_LUWokGG6EeafgMMnWkCwXA" general="_FDNFgGG4Eea77phLslQNgg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_EwTiMGG5Eea77phLslQNgg" name="BooleanType">
+      <generalization xmi:type="uml:Generalization" xmi:id="_sCkLMGG6EeafgMMnWkCwXA" general="_FDNFgGG4Eea77phLslQNgg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_lVG0sGG6EeafgMMnWkCwXA" name="EnumerationLiteral">
+      <generalization xmi:type="uml:Generalization" xmi:id="_MiTCYGG6EeafgMMnWkCwXA" general="_FDNFgGG4Eea77phLslQNgg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_ttYuQGG6EeafgMMnWkCwXA" name="IntegerType">
+      <generalization xmi:type="uml:Generalization" xmi:id="_p9_18GG7EeafgMMnWkCwXA" general="_6q_poGG5EeafgMMnWkCwXA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_80YikGG6EeafgMMnWkCwXA" name="IntegerRangeType">
+      <generalization xmi:type="uml:Generalization" xmi:id="_Xkeg8GG7EeafgMMnWkCwXA" general="_ttYuQGG6EeafgMMnWkCwXA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_y2RToGG6EeafgMMnWkCwXA" name="PositiveFloatType">
+      <generalization xmi:type="uml:Generalization" xmi:id="_KLJIUGG7EeafgMMnWkCwXA" general="_viLFoGG6EeafgMMnWkCwXA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_6bagEGG6EeafgMMnWkCwXA" name="PositiveIntegerType">
+      <generalization xmi:type="uml:Generalization" xmi:id="_YBNgQGG7EeafgMMnWkCwXA" general="_ttYuQGG6EeafgMMnWkCwXA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_3P93wGG6EeafgMMnWkCwXA" name="NumericType"/>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_4w3CwGG6EeafgMMnWkCwXA" name="IntegerType"/>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_viLFoGG6EeafgMMnWkCwXA" name="FloatTYpe">
+      <generalization xmi:type="uml:Generalization" xmi:id="_MbrnkGG7EeafgMMnWkCwXA" general="_6q_poGG5EeafgMMnWkCwXA"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_wl2JIGG6EeafgMMnWkCwXA" name="FloatRangeType">
+      <generalization xmi:type="uml:Generalization" xmi:id="_KoGxIGG7EeafgMMnWkCwXA" general="_viLFoGG6EeafgMMnWkCwXA"/>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_iTkaUGGOEeaGvdvSjLcz-g" name="Functions">
+    <packagedElement xmi:type="uml:Class" xmi:id="_17_0_3_1_8c30285_1419019373121_591598_3724" name="BuiltInFunction">
+      <generalization xmi:type="uml:Generalization" xmi:id="_17_0_3_1_8c30285_1419019384567_706167_3745" general="_17_0_3_1_8c30285_1419019257481_660967_3694"/>
+      <generalization xmi:type="uml:Generalization" xmi:id="_c45jkGGdEea4lKsYxG9VWg" general="_xfPK4GGcEea4lKsYxG9VWg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_17_0_3_1_8c30285_1419019509408_434833_3750" name="ReflectiveFunction">
+      <generalization xmi:type="uml:Generalization" xmi:id="_17_0_3_1_8c30285_1419019521197_729538_3771" general="_17_0_3_1_8c30285_1419019373121_591598_3724"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_17_0_3_1_8c30285_1421961965330_674105_3390" name="PiecewiseLinearFunction">
+      <generalization xmi:type="uml:Generalization" xmi:id="__wqpIGGcEea4lKsYxG9VWg" general="_xfPK4GGcEea4lKsYxG9VWg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_17_0_3_1_8c30285_1421961984026_78755_3411" name="StepFunction">
+      <generalization xmi:type="uml:Generalization" xmi:id="_17_0_3_1_8c30285_1421962012358_427016_3451" general="_17_0_3_1_8c30285_1421961965330_674105_3390"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_17_0_3_1_8c30285_1421964552768_61008_3507" name="CumulativeFunction">
+      <generalization xmi:type="uml:Generalization" xmi:id="_6M760GGcEea4lKsYxG9VWg" general="_xfPK4GGcEea4lKsYxG9VWg"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_17_0_3_1_8c30285_1422039610651_772026_3580" name="StateFunction">
+      <generalization xmi:type="uml:Generalization" xmi:id="__IAGoGGcEea4lKsYxG9VWg" general="_xfPK4GGcEea4lKsYxG9VWg"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1423090470203_314453_3599" name="transitionMatrix" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="UML_Standard_Profile.Validation_Profile.profile.uml#_12_0EAPbeta_f720368_1161801304311_71347_112"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_17_0_3_1_8c30285_1423090513251_663155_3601" name=""/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_17_0_3_1_8c30285_1423090513252_373361_3602" name="" value="1"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_xfPK4GGcEea4lKsYxG9VWg" name="Function"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="__vV3oGGVEeavx7SNYE5NCw" name="SyntacticElements">
+    <packagedElement xmi:type="uml:Package" xmi:id="_NaZBcGGNEeaGvdvSjLcz-g" name="Expressions">
+      <packagedElement xmi:type="uml:Class" xmi:id="_17_0_3_1_3e7016c_1413821694042_582767_3028" name="Expression" isAbstract="true">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_17_0_3_1_3e7016c_1416853994198_971802_3300" annotatedElement="_17_0_3_1_3e7016c_1413821694042_582767_3028">
+          <body>A lexical structure that may be evaluated to produce a value conforming to AbstractType.
+
+</body>
+        </ownedComment>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_1oasIGGvEeaQbZijt6ye1g" name="value" type="_17_0_3_1_8c30285_1419116887824_945549_3892"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_17_0_3_1_8c30285_1411744137007_264669_3316" name="FunctionCall">
+        <generalization xmi:type="uml:Generalization" xmi:id="_OYC_4GG2Eea77phLslQNgg" general="_17_0_3_1_3e7016c_1413821694042_582767_3028"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1411744137035_141017_3352" name="functionName" visibility="private" type="_17_0_3_1_8c30285_1430255829468_979784_3053"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1411744137035_582047_3353" name="args" visibility="private" type="_17_0_3_1_3e7016c_1413821694042_582767_3028">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_17_0_3_1_8c30285_1411744137060_807160_3432" name=""/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_17_0_3_1_8c30285_1411744137060_67159_3431" name="" value="*"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_17_0_3_1_8c30285_1422976853764_153556_3405" name="FloatLiteral">
+        <generalization xmi:type="uml:Generalization" xmi:id="_2JmmQGGyEeaQbZijt6ye1g" general="_BegwYGGwEeaQbZijt6ye1g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_17_0_3_1_8c30285_1420497976099_110945_4430" name="Initialization" isAbstract="true"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_17_0_3_1_3e7016c_1415122027241_629082_2980" name="IfExpression">
+        <generalization xmi:type="uml:Generalization" xmi:id="_17_0_3_1_8c30285_1418847983894_517247_3105" general="_17_0_3_1_3e7016c_1413821694042_582767_3028"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1415137695814_574637_2897" name="test" visibility="private" type="_17_0_3_1_8c30285_1422976560169_459894_3300"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1415137737367_360001_2899" name="then" type="_17_0_3_1_3e7016c_1413821694042_582767_3028"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1415137782475_540296_2901" name="else" visibility="private" type="_17_0_3_1_3e7016c_1413821694042_582767_3028">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_17_0_3_1_8c30285_1415137905095_487700_2903" name=""/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_17_0_3_1_8c30285_1415137905096_977548_2904" name="" value="1"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_17_0_3_1_8c30285_1422976586674_532312_3321" name="IntegerLiteral">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_17_0_3_1_8c30285_1422976624380_182814_3342" annotatedElement="_17_0_3_1_8c30285_1422976586674_532312_3321">
+          <body>an Expression that evalutates to an Integer.</body>
+        </ownedComment>
+        <generalization xmi:type="uml:Generalization" xmi:id="_2oRfQGGyEeaQbZijt6ye1g" general="_BegwYGGwEeaQbZijt6ye1g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_17_0_3_1_8c30285_1423967292008_981349_3449" name="In"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_17_0_3_1_3e7016c_1413899100183_659449_3188" name="BinaryExpression">
+        <generalization xmi:type="uml:Generalization" xmi:id="_17_0_3_1_3e7016c_1413913526405_640359_4014" general="_17_0_3_1_3e7016c_1413821694042_582767_3028"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1413925793486_290530_3717" name="lhs" visibility="private" type="_17_0_3_1_3e7016c_1413821694042_582767_3028"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1413925812328_9985_3719" name="rhs" visibility="private" type="_17_0_3_1_3e7016c_1413821694042_582767_3028"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1413925823599_468477_3721" name="op" visibility="private" type="_17_0_3_1_8c30285_1420496344626_969748_4198"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_17_0_3_1_3e7016c_1413899244629_576105_3251" name="CollectionExpression">
+        <generalization xmi:type="uml:Generalization" xmi:id="_17_0_3_1_3e7016c_1413910382827_925520_4002" general="_17_0_3_1_3e7016c_1413821694042_582767_3028"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1413925202344_635517_3645" name="isUnique" visibility="private">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_17_0_3_1_8c30285_1413925255907_484708_3651" annotatedElement="_17_0_3_1_8c30285_1413925202344_635517_3645">
+            <body>isUnique determines whether the collection is a Set (isUnique = true) or an Array (isUnique = false).</body>
+          </ownedComment>
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_17_0_3_1_3e7016c_1413916590723_900184_4636" name="PiecewiseExpression"/>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_17_0_3_1_8c30285_1413921178827_353752_2941" name="AggOp">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_17_0_3_1_3e7016c_1416841756316_869194_3023" annotatedElement="_17_0_3_1_8c30285_1413921178827_353752_2941">
+          <body>Due to the similarities of all constraints and all arithmetic terms in constraints and objective functions, aggregate operators are used in OPL to factorize these commonalities</body>
+        </ownedComment>
+        <generalization xmi:type="uml:Generalization" xmi:id="_17_0_3_1_8c30285_1413921326527_222160_2998" general="_17_0_3_1_8c30285_1413921264965_241783_2972"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_17_0_3_1_8c30285_1413921214779_42673_2961" name="sum"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_17_0_3_1_8c30285_1413921217288_508371_2963" name="min"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_17_0_3_1_8c30285_1413921219291_439874_2965" name="max"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_17_0_3_1_8c30285_1413921220856_368852_2967" name="prod"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_17_0_3_1_8c30285_1418935201804_890838_2966" name="inter"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_17_0_3_1_8c30285_1418935204995_879242_2968" name="union"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_17_0_3_1_8c30285_1420574772273_72766_4664" name="or"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_17_0_3_1_8c30285_1420574780112_416463_4666" name="and"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_17_0_3_1_8c30285_1413921264965_241783_2972" name="SetOp">
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_17_0_3_1_8c30285_1413921222528_836412_2969" name="symdiff"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_17_0_3_1_8c30285_1413921308681_502556_2991" name="diff"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_17_0_3_1_8c30285_1413921311567_760675_2993" name="union"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_17_0_3_1_8c30285_1420574899918_233351_4678" name="inter"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_17_0_3_1_8c30285_1418854736472_61422_3776" name="UnaryOp">
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_17_0_3_1_8c30285_1418854752081_393429_3797" name="negate"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_17_0_3_1_8c30285_1418854741654_272011_3795" name="unaryMinus"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_17_0_3_1_8c30285_1418935084097_256638_2889" name="BinaryOp">
+        <generalization xmi:type="uml:Generalization" xmi:id="_17_0_3_1_8c30285_1420496361955_13955_4218" general="_17_0_3_1_8c30285_1420496344626_969748_4198" generalizationSet="_AGlDAGGCEeaGvdvSjLcz-g"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_17_0_3_1_8c30285_1418935084098_884586_2890" name="add"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_17_0_3_1_8c30285_1418935084098_923610_2891" name="subtract"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_17_0_3_1_8c30285_1418935084098_802375_2892" name="multiply"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_17_0_3_1_8c30285_1418935084099_707827_2893" name="divide"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_17_0_3_1_8c30285_1418935084099_388533_2894" name="percent"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_17_0_3_1_8c30285_1418935084099_51861_2895" name="mod"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_17_0_3_1_8c30285_1418935084099_201160_2896" name="inter"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_17_0_3_1_8c30285_1418935084099_76661_2897" name="union "/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_17_0_3_1_8c30285_1418935084100_985490_2898" name="diff"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_17_0_3_1_8c30285_1418935084100_223014_2899" name="symdiff"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_17_0_3_1_8c30285_1418935084100_387985_2900" name="power"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_17_0_3_1_8c30285_1418935540792_827543_3124" name="LogicalOp">
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_17_0_3_1_8c30285_1418935540793_739817_3125" name="negation"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_17_0_3_1_8c30285_1418935540793_655516_3126" name="disjunction"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_17_0_3_1_8c30285_1418935540793_522317_3127" name="or"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_17_0_3_1_8c30285_1418935540793_148991_3128" name="and"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_17_0_3_1_8c30285_1418935540794_394508_3129" name="conjunction"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_17_0_3_1_8c30285_1418935290217_592907_2970" name="MembershipOp">
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_17_0_3_1_8c30285_1418935290217_315382_2971" name="in"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_17_0_3_1_8c30285_1418935290218_44528_2972" name="not in"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_17_0_3_1_8c30285_1418935290218_226632_2973" name="or"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_17_0_3_1_8c30285_1418935290218_218698_2974" name="and"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_17_0_3_1_8c30285_1418935290218_302542_2975" name="conjunction"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_17_0_3_1_8c30285_1418935139977_241177_2932" name="RelationalOp">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_17_0_3_1_8c30285_1418935139980_272349_2939" annotatedElement="_17_0_3_1_8c30285_1418935139977_241177_2932">
+          <body>Due to the similarities of all constraints and all arithmetic terms in constraints and objective functions, aggregate operators are used in OPL to factorize these commonalities</body>
+        </ownedComment>
+        <generalization xmi:type="uml:Generalization" xmi:id="_17_0_3_1_8c30285_1418935139981_505562_2941" general="_17_0_3_1_8c30285_1413921264965_241783_2972"/>
+        <generalization xmi:type="uml:Generalization" xmi:id="_17_0_3_1_8c30285_1420496366580_404382_4221" general="_17_0_3_1_8c30285_1420496344626_969748_4198" generalizationSet="_AGlDAGGCEeaGvdvSjLcz-g"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1418935139980_350891_2940" name="RelationalOp" visibility="private"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_17_0_3_1_8c30285_1418935139978_490837_2933" name="greaterThan"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_17_0_3_1_8c30285_1418935139978_181251_2934" name="greaterThanOrEqualTo"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_17_0_3_1_8c30285_1418935139978_844010_2935" name="lessThan"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_17_0_3_1_8c30285_1418935139978_539548_2936" name="lessThanOrEqualTo"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_17_0_3_1_8c30285_1418935139979_905253_2937" name="equalTo"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_17_0_3_1_8c30285_1418935139979_354271_2938" name="notEqualTo"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_17_0_3_1_3e7016c_1413916951622_165038_4666" name="UnaryExpression">
+        <generalization xmi:type="uml:Generalization" xmi:id="_17_0_3_1_3e7016c_1414433829963_151693_3147" general="_17_0_3_1_3e7016c_1413821694042_582767_3028"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1418854772511_938477_3799" name="exp" visibility="private" type="_17_0_3_1_3e7016c_1413821694042_582767_3028"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1418854805572_838286_3801" name="op" visibility="private" type="_17_0_3_1_8c30285_1418854736472_61422_3776"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_17_0_3_1_3e7016c_1413899112472_661396_3209" name="RangeExpression">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_17_0_3_1_8c30285_1413922224928_767258_3308" annotatedElement="_17_0_3_1_3e7016c_1413899112472_661396_3209">
+          <body>A RangeExpression is a AllRange defining the lower and upper bounds on the range.</body>
+        </ownedComment>
+        <generalization xmi:type="uml:Generalization" xmi:id="_oad1YGG1EeaQbZijt6ye1g" general="_17_0_3_1_3e7016c_1413821694042_582767_3028"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1419464340751_630066_3061" name="lowerLimit" visibility="private" type="_17_0_3_1_3e7016c_1413821694042_582767_3028"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1419464352954_180765_3064" name="upperLimit" visibility="private" type="_17_0_3_1_3e7016c_1413821694042_582767_3028"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1424731728788_154850_3101" name="type" visibility="private" type="_3P93wGG6EeafgMMnWkCwXA">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_17_0_3_1_8c30285_1424731774282_619191_3105" annotatedElement="_17_0_3_1_8c30285_1424731728788_154850_3101">
+            <body>FloatType for IntegerType. Used when a variable declaration explicitly </body>
+          </ownedComment>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_17_0_3_1_8c30285_1424731750234_530365_3103" name=""/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_17_0_3_1_8c30285_1424731750234_65655_3104" name="" value="1"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_17_0_3_1_3e7016c_1413899129768_42959_3230" name="Dereference">
+        <generalization xmi:type="uml:Generalization" xmi:id="_QPEy8GG2Eea77phLslQNgg" general="_17_0_3_1_3e7016c_1413821694042_582767_3028"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1413922887382_401191_3421" name="deref" visibility="private" type="_17_0_3_1_8c30285_1418856178138_830595_3918"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1413922995253_15541_3424" name="base" visibility="private" type="_R1SVEGGxEeaQbZijt6ye1g">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_17_0_3_1_8c30285_1413923019434_442685_3427" name="" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_17_0_3_1_8c30285_1413923019435_726873_3428" name="" value="1"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_17_0_3_1_3e7016c_1413901176819_289978_3677" name="Comprehension">
+        <generalization xmi:type="uml:Generalization" xmi:id="_17_0_3_1_3e7016c_1413915211696_807273_4271" general="_17_0_3_1_3e7016c_1413899244629_576105_3251"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_17_0_3_1_3e7016c_1413899521295_773394_3314" name="Operator"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_17_0_3_1_8c30285_1418856178138_830595_3918" name="Reference" isAbstract="true">
+        <generalization xmi:type="uml:Generalization" xmi:id="_17_0_3_1_8c30285_1422911347042_899841_3158" general="_17_0_3_1_3e7016c_1413821694042_582767_3028"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_17_0_3_1_8c30285_1420059557804_854315_3798" name="RelationalExpression">
+        <generalization xmi:type="uml:Generalization" xmi:id="_17_0_3_1_8c30285_1420496473430_147811_4255" general="_17_0_3_1_3e7016c_1413899100183_659449_3188"/>
+        <generalization xmi:type="uml:Generalization" xmi:id="_17_0_3_1_8c30285_1430944465433_27943_3042" general="_17_0_3_1_8c30285_1422976560169_459894_3300"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1420059659406_959063_3820" name="op" visibility="private" type="_17_0_3_1_8c30285_1418935139977_241177_2932" redefinedProperty="_17_0_3_1_8c30285_1413925823599_468477_3721"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_17_0_3_1_3e7016c_1413917921697_459239_4711" name="BlockExpression">
+        <generalization xmi:type="uml:Generalization" xmi:id="_17_0_3_1_3e7016c_1413918071026_146530_4825" general="_17_0_3_1_3e7016c_1413821694042_582767_3028"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1415138791489_65691_2920" name="blocks" visibility="private" type="_17_0_3_1_3e7016c_1413917899131_828130_4690">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_wpSR8GGqEeaAxfUTYeBtZA" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_wpTgEGGqEeaAxfUTYeBtZA" value="*"/>
+        </ownedAttribute>
+        <nestedClassifier xmi:type="uml:Class" xmi:id="_17_0_3_1_8c30285_1419956886646_841602_3864" name="AggregateExp">
+          <generalization xmi:type="uml:Generalization" xmi:id="_17_0_3_1_8c30285_1419973888198_50231_3290" general="_17_0_3_1_3e7016c_1413821694042_582767_3028"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1419957732182_756900_3947" name="op" visibility="private" isLeaf="true" type="_17_0_3_1_8c30285_1413921178827_353752_2941"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1419894705702_59339_3715" name="parameters" visibility="private" type="_17_0_3_1_8c30285_1419119471291_734924_4054">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_17_0_3_1_8c30285_1419894723324_250838_3717" name="" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_17_0_3_1_8c30285_1419894723325_371943_3718" name="" value="*"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1413920638710_923618_2897" name="body" type="_17_0_3_1_3e7016c_1413821694042_582767_3028"/>
+        </nestedClassifier>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_17_0_3_1_8c30285_1422305274798_560771_3108" name="AllExpression">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1422305283551_147201_3128" name="qualifiers" visibility="private" type="_17_0_3_1_8c30285_1419119471291_734924_4054">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_17_0_3_1_8c30285_1422305300964_4088_3130" name="" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_17_0_3_1_8c30285_1422305300964_45008_3131" name="" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1422305300980_493049_3132" name="body" visibility="private" type="_17_0_3_1_3e7016c_1413821694042_582767_3028"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_17_0_3_1_8c30285_1422976560169_459894_3300" name="BooleanExpression">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_17_0_3_1_8c30285_1422976610150_371784_3341" annotatedElement="_17_0_3_1_8c30285_1422976560169_459894_3300">
+          <body>an Expression that evaluates to a Boolean</body>
+        </ownedComment>
+        <generalization xmi:type="uml:Generalization" xmi:id="_17_0_3_1_8c30285_1422976661505_794841_3366" general="_17_0_3_1_8c30285_1420060176135_351854_3874"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_17_0_3_1_8c30285_1422391454579_487831_3103" name="FunctionRef">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1423253825691_634773_3691" name="name" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_17_0_3_1_8c30285_1422991658254_277873_3451" name="ParameterRef">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_17_0_3_1_8c30285_1439318626306_564213_2906" annotatedElement="_17_0_3_1_8c30285_1422991658254_277873_3451">
+          <body>a Reference introduced in a FormalParameter.</body>
+        </ownedComment>
+        <generalization xmi:type="uml:Generalization" xmi:id="_17_0_3_1_8c30285_1422991667842_184331_3472" general="_17_0_3_1_8c30285_1418856178138_830595_3918"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_17_0_3_1_8c30285_1419276711502_120561_4460" name="VariableBinding">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1419276722022_885593_4480" name="vars" visibility="private" type="_17_0_3_1_8c30285_1419893637290_820151_3583">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_17_0_3_1_8c30285_1422915411949_600743_3205" name="" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_17_0_3_1_8c30285_1422915411950_149994_3206" name="" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1419276729735_936466_4482" name="domain" visibility="private" type="_17_0_3_1_3e7016c_1413821694042_582767_3028"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_17_0_3_1_8c30285_1420060176135_351854_3874" name="PrimitiveExpression" isAbstract="true">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_17_0_3_1_8c30285_1422976547192_961260_3298" annotatedElement="_17_0_3_1_8c30285_1420060176135_351854_3874">
+          <body>an expression that evaluates to a Primitive</body>
+        </ownedComment>
+        <generalization xmi:type="uml:Generalization" xmi:id="_17_0_3_1_8c30285_1422976678814_591224_3376" general="_17_0_3_1_3e7016c_1413821694042_582767_3028"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_17_0_3_1_8c30285_1419893637290_820151_3583" name="BindingRef">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_17_0_3_1_8c30285_1439318678569_808300_2907" annotatedElement="_17_0_3_1_8c30285_1419893637290_820151_3583">
+          <body>a Reference that is neither a DataRef nor a ParameterRef.</body>
+        </ownedComment>
+        <generalization xmi:type="uml:Generalization" xmi:id="_17_0_3_1_8c30285_1422391775940_369370_3151" general="_17_0_3_1_8c30285_1418856178138_830595_3918"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_17_0_3_1_8c30285_1422976634009_5613_3344" name="StringLiteral">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_17_0_3_1_8c30285_1422976655973_137095_3364" annotatedElement="_17_0_3_1_8c30285_1422976634009_5613_3344">
+          <body>an Expression that evaluates to a String.</body>
+        </ownedComment>
+        <generalization xmi:type="uml:Generalization" xmi:id="_17_0_3_1_8c30285_1422976670420_411889_3373" general="_17_0_3_1_8c30285_1420060176135_351854_3874"/>
+        <generalization xmi:type="uml:Generalization" xmi:id="_1f4T0GGyEeaQbZijt6ye1g" general="_BegwYGGwEeaQbZijt6ye1g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_17_0_3_1_8c30285_1423959147180_741672_3232" name="IndexValuePair">
+        <generalization xmi:type="uml:Generalization" xmi:id="_17_0_3_1_8c30285_1423961211713_31418_3380" general="_17_0_3_1_3e7016c_1413821694042_582767_3028"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1423959159155_281548_3252" name="index" visibility="private" type="_17_0_3_1_3e7016c_1413821694042_582767_3028"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1423959179563_756157_3254" name="value" type="_17_0_3_1_3e7016c_1413821694042_582767_3028"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_17_0_3_1_3e7016c_1413821704715_190813_3070" name="ArraySlotConstraint">
+        <generalization xmi:type="uml:Generalization" xmi:id="_17_0_3_1_3e7016c_1415121422844_164952_2914" general="_17_0_3_1_3e7016c_1413821694042_582767_3028"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1415139118843_292438_2934" name="target" visibility="private"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_17_0_3_1_3e7016c_1413917965349_768536_4759" name="Error"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_17_0_3_1_8c30285_1423958715371_632623_3202" name="ArrayValue">
+        <generalization xmi:type="uml:Generalization" xmi:id="_N2fu0GGyEeaQbZijt6ye1g" general="_R1SVEGGxEeaQbZijt6ye1g"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1423958759253_336927_3222" name="items" visibility="private" type="_17_0_3_1_3e7016c_1413821694042_582767_3028">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_17_0_3_1_8c30285_1423958788216_730893_3224" name=""/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_17_0_3_1_8c30285_1423958788217_969472_3225" name="" value="*"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_17_0_3_1_8c30285_1423960444857_185722_3262" name="SetValue">
+        <generalization xmi:type="uml:Generalization" xmi:id="_17_0_3_1_8c30285_1423961207529_670819_3377" general="_17_0_3_1_3e7016c_1413821694042_582767_3028"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1423960550278_403510_3285" name="items" visibility="private" type="_17_0_3_1_3e7016c_1413821694042_582767_3028">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_17_0_3_1_8c30285_1423960566326_943842_3288" name=""/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_17_0_3_1_8c30285_1423960566326_286988_3289" name="" value="*"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_17_0_3_1_8c30285_1422390831872_902552_3038" name="DataRef">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_17_0_3_1_8c30285_1426020744446_539018_3083" annotatedElement="_17_0_3_1_8c30285_1422390831872_902552_3038">
+          <body>a reference to a DataObject</body>
+        </ownedComment>
+        <generalization xmi:type="uml:Generalization" xmi:id="_17_0_3_1_8c30285_1422391758804_237833_3144" general="_17_0_3_1_8c30285_1418856178138_830595_3918"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_17_0_3_1_8c30285_1423009356900_55070_3539" name="DeferredInit"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_17_0_3_1_8c30285_1420496632279_300959_4266" name="RelationalInit">
+        <generalization xmi:type="uml:Generalization" xmi:id="_17_0_3_1_8c30285_1420498038734_861242_4454" general="_17_0_3_1_8c30285_1420497976099_110945_4430"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1420496739071_173082_4305" name="bindingVar" visibility="private" type="_17_0_3_1_8c30285_1419893637290_820151_3583"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1420496756740_530238_4307" name="sources" visibility="private" type="_17_0_3_1_8c30285_1419276711502_120561_4460"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1420496793330_305517_4309" name="relation" visibility="private" type="_17_0_3_1_8c30285_1420059557804_854315_3798"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_17_0_3_1_8c30285_1420496344626_969748_4198" name="AbstractBinaryOp" isAbstract="true"/>
+      <packagedElement xmi:type="uml:GeneralizationSet" xmi:id="_AGlDAGGCEeaGvdvSjLcz-g" name="GeneralizationSet_BinaryOp_RelationalOp" isDisjoint="true" generalization="_17_0_3_1_8c30285_1420496361955_13955_4218 _17_0_3_1_8c30285_1420496366580_404382_4221"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_17_0_3_1_8c30285_1423960915879_948327_3321" name="RecordValue">
+        <generalization xmi:type="uml:Generalization" xmi:id="_MYqpcGGzEeaQbZijt6ye1g" general="_R1SVEGGxEeaQbZijt6ye1g"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1423960938164_513262_3341" name="fieldPairs" visibility="private" type="_17_0_3_1_8c30285_1423959147180_741672_3232">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_17_0_3_1_8c30285_1423960970344_543343_3343" name=""/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_17_0_3_1_8c30285_1423960970344_850370_3344" name="" value="*"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_17_0_3_1_8c30285_1430255829468_979784_3053" name="Identifier">
+        <generalization xmi:type="uml:Generalization" xmi:id="_ymBP8GGgEeaA6bqOAB9JBQ">
+          <general xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EString"/>
+        </generalization>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_ltP70GGiEeaA6bqOAB9JBQ" name="EnumValue">
+        <generalization xmi:type="uml:Generalization" xmi:id="_06YaEGGyEeaQbZijt6ye1g" general="_BegwYGGwEeaQbZijt6ye1g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_R1SVEGGxEeaQbZijt6ye1g" name="Dereferenceable">
+        <generalization xmi:type="uml:Generalization" xmi:id="_o1ycQGGxEeaQbZijt6ye1g" general="_17_0_3_1_3e7016c_1413821694042_582767_3028"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_BegwYGGwEeaQbZijt6ye1g" name="LiteralExpression">
+        <generalization xmi:type="uml:Generalization" xmi:id="_G4OAAGGwEeaQbZijt6ye1g" general="_17_0_3_1_3e7016c_1413821694042_582767_3028"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_huLDsGGNEeaGvdvSjLcz-g" name="Declarations">
+      <packagedElement xmi:type="uml:Class" xmi:id="_17_0_3_1_8c30285_1419019257481_660967_3694" name="FunctionDeclaration" isAbstract="true">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_17_0_3_1_8c30285_1423600263641_798884_3729" annotatedElement="_17_0_3_1_8c30285_1419019257481_660967_3694">
+          <body>A Function binds a set of parameters (.parameters) in the scope of an expression (.body) and evaluates the Expression producing a value.</body>
+        </ownedComment>
+        <generalization xmi:type="uml:Generalization" xmi:id="_17_0_3_1_8c30285_1421962361322_913437_3462" general="_17_0_3_1_8c30285_1419092903466_49789_2914"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1419019271684_464990_3714" name="name" visibility="private" type="_17_0_3_1_8c30285_1422391454579_487831_3103">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_17_0_3_1_8c30285_1423600290637_695898_3735" annotatedElement="_17_0_3_1_8c30285_1419019271684_464990_3714">
+            <body>Function.name is a Reference associated with a Function used in making calls to the function.</body>
+          </ownedComment>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1422038712106_704038_3571" name="body" visibility="private" type="_17_0_3_1_3e7016c_1413821694042_582767_3028"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1422040888689_860701_3624" name="parameters" visibility="private" type="_17_0_3_1_8c30285_1418856178138_830595_3918">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_17_0_3_1_8c30285_1422040934080_325889_3627" name=""/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_17_0_3_1_8c30285_1422040934080_397925_3628" name="" value="*"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_17_0_3_1_8c30285_1419092903466_49789_2914" name="Declaration" isAbstract="true">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1419093885476_967764_3119" name="order" visibility="private">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_17_0_3_1_8c30285_1419093973481_995092_3121" annotatedElement="_17_0_3_1_8c30285_1419093885476_967764_3119">
+            <body>the sequence number (starting at 1) in which the declaration is found in the </body>
+          </ownedComment>
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_17_0_3_1_8c30285_1418848772467_598659_3183" name="Model">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_17_0_3_1_8c30285_1423599622050_643403_3720">
+          <body>A Model is a container for a complete optimization problem. </body>
+        </ownedComment>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1418848812251_189360_3203" name="id" visibility="private" type="_17_0_3_1_8c30285_1430255829468_979784_3053">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_17_0_3_1_8c30285_1419097679734_891996_3355" annotatedElement="_17_0_3_1_8c30285_1418848812251_189360_3203">
+            <body>POD This might be a CPLEX-only thing. Or it might be wrong!</body>
+          </ownedComment>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_17_0_3_1_8c30285_1419098032127_447554_3384" name=""/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_17_0_3_1_8c30285_1419098032127_628948_3385" name="" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1421360976859_53470_3110" name="isConstraintProblem" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          <defaultValue xmi:type="uml:LiteralBoolean" xmi:id="_17_0_3_1_8c30285_1421360989681_321230_3112" name=""/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1419094090661_599262_3122" name="types" visibility="private" type="_17_0_3_1_8c30285_1419008331388_584024_3193" subsettedProperty="_17_0_3_1_8c30285_1419092814771_974275_2887">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_17_0_3_1_8c30285_1419094108333_72118_3125" name=""/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_17_0_3_1_8c30285_1419094108333_652881_3126" name="" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1419278121425_260486_4771" name="data" visibility="private" type="_17_0_3_1_8c30285_1419273485550_221587_4338" subsettedProperty="_17_0_3_1_8c30285_1419092814771_974275_2887">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_17_0_3_1_8c30285_1423599786526_876651_3721" annotatedElement="_17_0_3_1_8c30285_1419278121425_260486_4771">
+            <body>Model.data is a property providing the DataDeclarations of the Model.</body>
+          </ownedComment>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_17_0_3_1_8c30285_1419278140613_89996_4773" name=""/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_17_0_3_1_8c30285_1419278140614_523469_4774" name="" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1418855816629_837345_3884" name="constraints" visibility="private" type="_17_0_3_1_8c30285_1418855366768_644130_3858" subsettedProperty="_17_0_3_1_8c30285_1419092814771_974275_2887">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_17_0_3_1_8c30285_1419097614523_481712_3349" annotatedElement="_17_0_3_1_8c30285_1418855816629_837345_3884">
+            <body>POD Note: There are also constraints in the Instruction. What is this one about?</body>
+          </ownedComment>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_17_0_3_1_8c30285_1418855844122_607095_3886" name=""/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_17_0_3_1_8c30285_1418855844122_934496_3887" name="" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1418855031357_120272_3806" name="instruction" visibility="private" type="_17_0_3_1_8c30285_1418855202160_325633_3809" subsettedProperty="_17_0_3_1_8c30285_1419092814771_974275_2887"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1422039676827_105866_3608" name="functions" visibility="private" type="_17_0_3_1_8c30285_1419019257481_660967_3694" subsettedProperty="_17_0_3_1_8c30285_1419092814771_974275_2887">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_17_0_3_1_8c30285_1422039723615_606346_3610" name=""/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_17_0_3_1_8c30285_1422039723615_585439_3611" name="" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1419097708213_743736_3361" name="activities" visibility="private" type="_17_0_3_1_8c30285_1419097300814_304405_3220" subsettedProperty="_17_0_3_1_8c30285_1419092814771_974275_2887">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_17_0_3_1_8c30285_1419097726991_472983_3363" name=""/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_17_0_3_1_8c30285_1419097726991_532874_3364" name="" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1419097727001_56939_3365" name="resources" visibility="private" type="_17_0_3_1_8c30285_1419097313236_578417_3241" subsettedProperty="_17_0_3_1_8c30285_1419092814771_974275_2887"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1419097747565_679871_3367" name="assertions" visibility="private" type="_17_0_3_1_8c30285_1418855366768_644130_3858" subsettedProperty="_17_0_3_1_8c30285_1419092814771_974275_2887">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_17_0_3_1_8c30285_1419097760010_208866_3369" name=""/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_17_0_3_1_8c30285_1419097760010_724502_3370" name="" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1419097760020_534496_3371" name="scheduleInit" visibility="private" type="_17_0_3_1_8c30285_1419097354395_822163_3283" subsettedProperty="_17_0_3_1_8c30285_1419092814771_974275_2887">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_17_0_3_1_8c30285_1419097801941_210091_3373" name=""/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_17_0_3_1_8c30285_1419097801941_708093_3374" name="" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1420332522677_789675_3498" name="scripts" visibility="private" type="_17_0_3_1_8c30285_1418856153251_434408_3896" subsettedProperty="_17_0_3_1_8c30285_1419092814771_974275_2887">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_17_0_3_1_8c30285_1422044023638_315548_3634" name=""/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_17_0_3_1_8c30285_1422044023638_976993_3635" name="" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1419097815818_715584_3375" name="settings" visibility="private" type="_17_0_3_1_8c30285_1419097370809_769754_3304" subsettedProperty="_17_0_3_1_8c30285_1419092814771_974275_2887">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_17_0_3_1_8c30285_1419097827377_496497_3377" name=""/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_17_0_3_1_8c30285_1419097827377_698381_3378" name="" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1419092814771_974275_2887" name="declarations" visibility="private" type="_17_0_3_1_8c30285_1419092903466_49789_2914" isOrdered="true" isReadOnly="true" isDerived="true" isDerivedUnion="true">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_17_0_3_1_8c30285_1432242133714_309468_3105" annotatedElement="_17_0_3_1_8c30285_1419092814771_974275_2887">
+            <body>an ordered collection of the subtypes of Declaration that subset this property (e.g. types, data, constraints, etc.)</body>
+          </ownedComment>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_17_0_3_1_8c30285_1419092831381_773096_2890" name=""/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_17_0_3_1_8c30285_1419092831381_375176_2891" name="" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1419099551740_940683_3512" name="search" visibility="private" type="_17_0_3_1_8c30285_1419099524084_863845_3492">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_17_0_3_1_8c30285_1419099566100_127233_3514" name=""/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_17_0_3_1_8c30285_1419099566101_731631_3515" name="" value="1"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_17_0_3_1_8c30285_1418855202160_325633_3809" name="Objective">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_17_0_3_1_8c30285_1432239901312_494264_2915" annotatedElement="_17_0_3_1_8c30285_1418855202160_325633_3809">
+          <body>an expression to be satisfied or optimized by performing the analysis described by the Model</body>
+        </ownedComment>
+        <generalization xmi:type="uml:Generalization" xmi:id="_17_0_3_1_8c30285_1422303111568_912978_3058" general="_17_0_3_1_8c30285_1419092903466_49789_2914"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1418855266969_259508_3855" name="action" visibility="private" type="_17_0_3_1_8c30285_1418855233264_167727_3832"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1418855208300_613921_3829" name="expression" visibility="private" type="_17_0_3_1_3e7016c_1413821694042_582767_3028"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1419096605145_345157_3172" name="isLinearRelaxation" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          <defaultValue xmi:type="uml:LiteralBoolean" xmi:id="_17_0_3_1_8c30285_1419096625943_419496_3174" name=""/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_17_0_3_1_8c30285_1419097370809_769754_3304" name="Setting">
+        <generalization xmi:type="uml:Generalization" xmi:id="_17_0_3_1_8c30285_1419097413971_681675_3328" general="_17_0_3_1_8c30285_1419092903466_49789_2914"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_17_0_3_1_8c30285_1419099876322_665085_3544" name="ParameterDeclaration"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_17_0_3_1_8c30285_1419097300814_304405_3220" name="ActivityDeclaration">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_17_0_3_1_8c30285_1432240205135_417508_3043" annotatedElement="_17_0_3_1_8c30285_1419097300814_304405_3220">
+          <body>a unit of work that is constrained to occur within the bounds defined</body>
+        </ownedComment>
+        <generalization xmi:type="uml:Generalization" xmi:id="_17_0_3_1_8c30285_1419097419979_35877_3331" general="_17_0_3_1_8c30285_1419092903466_49789_2914" generalizationSet="_Zqs5UGGJEeaGvdvSjLcz-g"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1432240317944_252687_3044" name="duration" visibility="private" type="_17_0_3_1_8c30285_1432240332632_180094_3046">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_17_0_3_1_8c30285_1432240658936_3205_3092" annotatedElement="_17_0_3_1_8c30285_1432240317944_252687_3044">
+            <body>a quantity of time required to perform the activity associated with this declaration</body>
+          </ownedComment>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1432240332723_363077_3047" name="earliestStartTime" visibility="private" type="_17_0_3_1_8c30285_1432240421797_235622_3064">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_17_0_3_1_8c30285_1432240699732_761128_3093" annotatedElement="_17_0_3_1_8c30285_1432240332723_363077_3047">
+            <body>the earliest point in time (a timepoint) at which the activity may start.</body>
+          </ownedComment>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1432240356065_722195_3050" name="latestEndTime" visibility="private" type="_17_0_3_1_8c30285_1432240421797_235622_3064">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_17_0_3_1_8c30285_1432240717648_289388_3094" annotatedElement="_17_0_3_1_8c30285_1432240356065_722195_3050">
+            <body>the latest point in time (a timepoint) at which the activity may end.</body>
+          </ownedComment>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_17_0_3_1_8c30285_1418855233264_167727_3832" name="OptimizationMode">
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_17_0_3_1_8c30285_1418855239129_558320_3851" name="minimize"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_17_0_3_1_8c30285_1418855243612_949841_3853" name="maximize"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_17_0_3_1_8c30285_1419096661488_180326_3175" name="solve"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_17_0_3_1_8c30285_1419097313236_578417_3241" name="ResourceDeclaration">
+        <generalization xmi:type="uml:Generalization" xmi:id="_17_0_3_1_8c30285_1419097424147_926126_3334" general="_17_0_3_1_8c30285_1419092903466_49789_2914" generalizationSet="_Zqs5UGGJEeaGvdvSjLcz-g"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_17_0_3_1_8c30285_1419097338137_599369_3262" name="Assertion" visibility="package">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_q99mUGGIEeaGvdvSjLcz-g" annotatedElement="_17_0_3_1_8c30285_1419097338137_599369_3262">
+          <body>Needed? We have Constraint</body>
+        </ownedComment>
+        <generalization xmi:type="uml:Generalization" xmi:id="_17_0_3_1_8c30285_1419097385443_352380_3325" general="_17_0_3_1_8c30285_1419092903466_49789_2914"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1424810960677_25569_2935" name="exp" visibility="private" type="_17_0_3_1_8c30285_1418855366768_644130_3858"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_17_0_3_1_8c30285_1418855366768_644130_3858" name="Constraint">
+        <generalization xmi:type="uml:Generalization" xmi:id="_17_0_3_1_8c30285_1419096762119_104284_3204" general="_17_0_3_1_8c30285_1419092903466_49789_2914"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1420333417255_437961_3554" name="name" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_17_0_3_1_8c30285_1420333426671_450312_3556" name=""/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_17_0_3_1_8c30285_1420333426672_616907_3557" name="" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1418855372657_632319_3878" name="exp" visibility="private" type="_17_0_3_1_3e7016c_1413821694042_582767_3028"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_17_0_3_1_3e7016c_1413917899131_828130_4690" name="BooleanBlock"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_17_0_3_1_8c30285_1418856153251_434408_3896" name="Script">
+        <generalization xmi:type="uml:Generalization" xmi:id="_17_0_3_1_8c30285_1422045422013_414309_3649" general="_17_0_3_1_8c30285_1419092903466_49789_2914"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1418856163089_759555_3916" name="id" visibility="private" type="_17_0_3_1_8c30285_1418856178138_830595_3918">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_17_0_3_1_8c30285_1418856178138_71142_3919" name=""/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_17_0_3_1_8c30285_1418856178139_155250_3920" name="" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1418856178152_20493_3921" name="isMain" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          <defaultValue xmi:type="uml:LiteralBoolean" xmi:id="_17_0_3_1_8c30285_1420332895295_932327_3545" name="" value="true"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1420333935034_688473_3590" name="statements" visibility="private" type="_17_0_3_1_8c30285_1420333971048_549889_3593">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_17_0_3_1_8c30285_1420333971049_785293_3594" name="" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_17_0_3_1_8c30285_1420333971050_422982_3595" name="" value="*"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_17_0_3_1_3e7016c_1413901218816_228028_3698" name="Extension">
+        <generalization xmi:type="uml:Generalization" xmi:id="_17_0_3_1_3e7016c_1413915213984_961189_4274" general="_17_0_3_1_3e7016c_1413899244629_576105_3251"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1413924497764_523584_3499" name="exps" visibility="private" type="_17_0_3_1_3e7016c_1413821694042_582767_3028">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_17_0_3_1_8c30285_1413924519180_803713_3501" name=""/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_17_0_3_1_8c30285_1413924519181_560647_3502" name="" value="*"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_17_0_3_1_8c30285_1419119471291_734924_4054" name="FormalParameter">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_17_0_3_1_8c30285_1423600164329_600658_3728" annotatedElement="_17_0_3_1_8c30285_1419119471291_734924_4054">
+          <body>A FormalParameter binds a set of parameters provided by .boundVars to a Domain.</body>
+        </ownedComment>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1419892675668_589628_3508" name="domain" visibility="private" type="_17_0_3_1_8c30285_1419892432109_324249_3412"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1419119137649_836600_4042" name="boundVars" visibility="private" type="_17_0_3_1_8c30285_1419893637290_820151_3583" isOrdered="true">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_17_0_3_1_8c30285_1419119158635_590255_4046" name=""/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_17_0_3_1_8c30285_1419119158635_827938_4047" name="" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1419895005047_393143_3790" name="isOrdered" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          <defaultValue xmi:type="uml:LiteralBoolean" xmi:id="_17_0_3_1_8c30285_1419895015759_487375_3793" name=""/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1419895329738_462335_3794" name="require" visibility="private" type="_17_0_3_1_8c30285_1420059557804_854315_3798">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_17_0_3_1_8c30285_1439317967242_39697_2905" annotatedElement="_17_0_3_1_8c30285_1419895329738_462335_3794">
+            <body>A constraint governing valid values of the the .boundVars. </body>
+          </ownedComment>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_17_0_3_1_8c30285_1419895341712_738528_3797" name=""/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_17_0_3_1_8c30285_1419895341713_551021_3798" name="" value="1"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_17_0_3_1_8c30285_1419273485550_221587_4338" name="DataDeclaration">
+        <generalization xmi:type="uml:Generalization" xmi:id="_17_0_3_1_8c30285_1419464656002_2108_3143" general="_17_0_3_1_8c30285_1419092903466_49789_2914"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1420471461599_644966_3996" name="name" visibility="private" type="_17_0_3_1_8c30285_1430255829468_979784_3053"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1420497777923_637065_4381" name="type" visibility="private" type="_17_0_3_1_8c30285_1419116887824_945549_3892"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1420497694313_422869_4378" name="isDecisionVar" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          <defaultValue xmi:type="uml:LiteralBoolean" xmi:id="_17_0_3_1_8c30285_1420497705752_909679_4380" name=""/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1431120995918_627824_2915" name="isDecisionExpr" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+          <defaultValue xmi:type="uml:LiteralBoolean" xmi:id="_17_0_3_1_8c30285_1431121008632_918184_2917" name=""/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1419273643972_790247_4394" name="value" visibility="private" type="_17_0_3_1_8c30285_1420497976099_110945_4430">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_17_0_3_1_8c30285_1419273761331_380808_4397" name=""/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_17_0_3_1_8c30285_1419273761331_102118_4398" name="" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1425411367026_603180_3078" name="valueConstraint" visibility="private" type="_17_0_3_1_3e7016c_1413821694042_582767_3028">
+          <ownedComment xmi:type="uml:Comment" xmi:id="_17_0_3_1_8c30285_1425411471709_41603_3080" annotatedElement="_17_0_3_1_8c30285_1425411367026_603180_3078">
+            <body>An Expression (including a RangeExpression) that further constrains the value space described by .type. This is introduced by the keyword &quot;in.&quot; Example: &quot;dvar float Store[Months][Products] in 0..1000;&quot;  this property expresses the &quot;in 0..1000&quot;
+</body>
+          </ownedComment>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_17_0_3_1_8c30285_1425411548454_563041_3086" name=""/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_17_0_3_1_8c30285_1425411548454_209526_3087" name="" value="1"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_17_0_3_1_8c30285_1419099524084_863845_3492" name="SearchProcedure"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_17_0_3_1_8c30285_1419097354395_822163_3283" name="ScheduleInitialization">
+        <generalization xmi:type="uml:Generalization" xmi:id="_17_0_3_1_8c30285_1419097432189_449456_3337" general="_17_0_3_1_8c30285_1419092903466_49789_2914"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_17_0_3_1_8c30285_1419892432109_324249_3412" name="ParameterDomain" isAbstract="true"/>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_17_0_3_1_8c30285_1419895530924_979351_3805" name="Quantifier">
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_17_0_3_1_8c30285_1419895543597_631736_3824" name="forAll"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_17_0_3_1_8c30285_1420579908957_244185_4765" name="ForAllConstraint">
+        <generalization xmi:type="uml:Generalization" xmi:id="_17_0_3_1_8c30285_1420580737290_480594_4822" general="_17_0_3_1_8c30285_1418855366768_644130_3858"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1420579929700_658018_4785" name="qualifiers" visibility="private" type="_17_0_3_1_8c30285_1419119471291_734924_4054">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_17_0_3_1_8c30285_1420580015284_482947_4787" name="" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_17_0_3_1_8c30285_1420580015284_109195_4788" name="" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_17_0_3_1_8c30285_1420580020111_857106_4789" name="exps" visibility="private" type="_17_0_3_1_8c30285_1418855366768_644130_3858">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_17_0_3_1_8c30285_1425418966246_78519_3150" name="" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_17_0_3_1_8c30285_1425418966247_885795_3151" name="" value="*"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_17_0_3_1_8c30285_1420333971048_549889_3593" name="ScriptStatement" isAbstract="true">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_17_0_3_1_8c30285_1420334108957_906763_3628" annotatedElement="_17_0_3_1_8c30285_1420333971048_549889_3593">
+          <body>This is</body>
+        </ownedComment>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_17_0_3_1_8c30285_1420337022018_470195_3770" name="DataInitMethods" isAbstract="true"/>
+      <packagedElement xmi:type="uml:GeneralizationSet" xmi:id="_Zqs5UGGJEeaGvdvSjLcz-g" name="GeneralizationSet_ActivityDeclaration_ResourceDeclaration" isDisjoint="true" generalization="_17_0_3_1_8c30285_1419097419979_35877_3331 _17_0_3_1_8c30285_1419097424147_926126_3334"/>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_FDNFgGG4Eea77phLslQNgg" name="AbstractPrimitiveType">
+    <generalization xmi:type="uml:Generalization" xmi:id="_17_0_3_1_8c30285_1419116906692_653004_3913" general="_17_0_3_1_8c30285_1419116887824_945549_3892"/>
+  </packagedElement>
+</uml:Model>
