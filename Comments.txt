@@ -1,3 +1,4 @@
+2016-08-14: The problem with qualifiedNameDepth has to do with the nesting of packages. (if =2 then need 3 at least!) And it is backwards.
 2016-08-13: I removed the subtyping on ParameterDomain
 2016-08-13: --> It is the package used that seems to decide whether qualifiedNameDepth is applied (see AbstractType in Expressions diagram)
 2016-08-13: I removed the generalization from DefineType to Declaration
