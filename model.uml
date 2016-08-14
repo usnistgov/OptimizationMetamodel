@@ -177,6 +177,9 @@ Profile also includes validation suites for UML model correctness and completene
     <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_wl2JIGG6EeafgMMnWkCwXA" name="FloatRangeType">
       <generalization xmi:type="uml:Generalization" xmi:id="_KoGxIGG7EeafgMMnWkCwXA" general="_viLFoGG6EeafgMMnWkCwXA"/>
     </packagedElement>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_FDNFgGG4Eea77phLslQNgg" name="AbstractPrimitiveType">
+      <generalization xmi:type="uml:Generalization" xmi:id="_17_0_3_1_8c30285_1419116906692_653004_3913" general="_17_0_3_1_8c30285_1419116887824_945549_3892"/>
+    </packagedElement>
   </packagedElement>
   <packagedElement xmi:type="uml:Package" xmi:id="_iTkaUGGOEeaGvdvSjLcz-g" name="Functions">
     <packagedElement xmi:type="uml:Class" xmi:id="_17_0_3_1_8c30285_1419019373121_591598_3724" name="BuiltInFunction">
@@ -745,8 +748,5 @@ Profile also includes validation suites for UML model correctness and completene
       <packagedElement xmi:type="uml:Class" xmi:id="_17_0_3_1_8c30285_1420337022018_470195_3770" name="DataInitMethods" isAbstract="true"/>
       <packagedElement xmi:type="uml:GeneralizationSet" xmi:id="_Zqs5UGGJEeaGvdvSjLcz-g" name="GeneralizationSet_ActivityDeclaration_ResourceDeclaration" isDisjoint="true" generalization="_17_0_3_1_8c30285_1419097419979_35877_3331 _17_0_3_1_8c30285_1419097424147_926126_3334"/>
     </packagedElement>
-  </packagedElement>
-  <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_FDNFgGG4Eea77phLslQNgg" name="AbstractPrimitiveType">
-    <generalization xmi:type="uml:Generalization" xmi:id="_17_0_3_1_8c30285_1419116906692_653004_3913" general="_17_0_3_1_8c30285_1419116887824_945549_3892"/>
   </packagedElement>
 </uml:Model>
