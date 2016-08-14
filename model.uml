@@ -206,7 +206,7 @@ Profile also includes validation suites for UML model correctness and completene
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_17_0_3_1_8c30285_1423090513252_373361_3602" name="" value="1"/>
       </ownedAttribute>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_xfPK4GGcEea4lKsYxG9VWg" name="Function"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_xfPK4GGcEea4lKsYxG9VWg" name="Function" isAbstract="true"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Package" xmi:id="__vV3oGGVEeavx7SNYE5NCw" name="SyntacticElements">
     <packagedElement xmi:type="uml:Package" xmi:id="_NaZBcGGNEeaGvdvSjLcz-g" name="Expressions">
