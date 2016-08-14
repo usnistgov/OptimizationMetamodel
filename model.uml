@@ -749,5 +749,4 @@ Profile also includes validation suites for UML model correctness and completene
   <packagedElement xmi:type="uml:PrimitiveType" xmi:id="_FDNFgGG4Eea77phLslQNgg" name="AbstractPrimitiveType">
     <generalization xmi:type="uml:Generalization" xmi:id="_17_0_3_1_8c30285_1419116906692_653004_3913" general="_17_0_3_1_8c30285_1419116887824_945549_3892"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:Class" xmi:id="_59OZIGHDEeavO-u-QE6WWg" name="TestClas"/>
 </uml:Model>
