@@ -12,16 +12,13 @@ describing your plans; we are planning on enhancing the work.
 Details of the model are provided in a paper found in the doc subdirectory.
 
 Declarations:
-![alt text][decls]
-[decls]: https://github.com/usnistgov/OptimizationMetamodel/doc/images/OM-declarations.jpg "Declarations"
+![decls](https://github.com/usnistgov/OptimizationMetamodel/doc/images/OM-declarations.jpg)
 
 Expressions:
-![alt text][exprs]
-[exprs]: https://github.com/usnistgov/OptimizationMetamodel/doc/images/OM-expressions.jpg "Expressions"
+![exprs](https://github.com/usnistgov/OptimizationMetamodel/doc/images/OM-expressions.jpg)
 
 Operators:
-![alt text][ops]
-[ops]: https://github.com/usnistgov/OptimizationMetamodel/doc/images/OM-operators.jpg "Operators"
+![ops](https://github.com/usnistgov/OptimizationMetamodel/doc/images/OM-operators.jpg)
 
 ## Installation
 
